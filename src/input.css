@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primaryColor: #080c2e;
+  --color-secondaryColor: #640ef1;
+  --color-descriptionColor: #5d5d7c;
+}
+
+@layer base {  
+  main {
+    @apply max-w-6xl mx-auto px-16;
+  }
+
+  section {
+    @apply my-[100px];
+  }
+
+  h2 {
+    @apply text-xl text-primaryColor font-bold;
+  }
+
+  h3 {
+    @apply text-lg font-bold;
+  }
+
+  @media (min-width: 768px) {
+    section {
+      @apply max-w-none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    /* nav ul {
+      @apply flex-col bg-white -z-10 absolute top-0 left-0 h-screen  w-1/2 py-32 shadow-[0_3px_10px_rgb(0,0,0,0.2)];
+    } */
+
+      nav ul li {
+        @apply px-16 py-5 cursor-pointer hover:bg-[#F1F4F5];
+    }
+  }
+}
+
+@layer components {
+  /* .navOpen {
+    @apply !flex flex-col bg-white -z-10 absolute top-0 left-0 h-screen w-1/2 py-32 shadow-[0_3px_10px_rgb(0,0,0,0.2)];
+  } */
+
+  .btn {
+    @apply px-10 py-2.5 text-lg font-bold rounded-full ease-in-out duration-300 ;
+  }
+
+  .card {
+    @apply z-0 bg-white rounded-2xl px-3.5 pt-[30px] pb-20 relative cursor-pointer ease-in-out duration-300 hover:bg-primaryColor;
+  }
+
+  .description {
+    @apply text-base text-descriptionColor leading-loose;
+  }
+
+  .small-badges {
+    @apply bg-white w-fit flex flex-col items-center gap-2 rounded-full px-5 py-2 mx-auto md:flex-row md:ms-0;
+  }
+
+  .partners {
+    @apply flex gap-2 items-center text-primaryColor hover:text-secondaryColor ease-in-out duration-300 cursor-pointer;
+  }
+
+  .title-section {
+    @apply text-4xl font-['Clash_Display'] text-primaryColor;
+  }
+
+  .link-text {
+    @apply text-base text-secondaryColor font-semibold;
+  }
+
+  .view-details-button {
+    @apply text-base text-white font-semibold px-7 py-2 bg-secondaryColor rounded-full shadow-[0_10px_20px_var(--second-color)] ease-in-out duration-300 hover:bg-primaryColor hover:shadow-[0_10px_20px_var(--main-color)];
+  }
+
+  .faq-Card {
+    @apply bg-white rounded-2xl p-5 flex gap-x-[30px] justify-between;
+  }
+
+  .closing-card {
+    @apply flex justify-center items-center bg-white rounded-2xl p-4 cursor-pointer ease-in-out duration-300 hover:bg-primaryColor;
+  }
+
+  .footer-socialMedia {
+    @apply p-[10px] bg-white rounded-full w-fit text-secondaryColor ease-in-out duration-300 hover:bg-secondaryColor hover:text-white cursor-pointer;
+  }
+
+  .footer-detail {
+    @apply text-base text-descriptionColor w-fit cursor-pointer hover:text-secondaryColor;
+  }
+
+  @media (min-width: 768px) {
+    .btn {
+      @apply px-7;
+    }
+
+    .title-section {
+      @apply text-4xl;
+    }
+  }
+}

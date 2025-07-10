@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- FONT -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOX ICONS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Document</title>
+</head>
+<body class="bg-[#F1F4F5] font-['Poppins']">
+    <header class="fixed top-0 left-0 z-50 w-full">
+        <nav class="bg-white px-16 py-5 flex items-center justify-between relative shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+            <div class="logo">
+                <svg width="176" height="42" viewBox="0 0 176 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.0246 33.1116C22.0605 29.4402 21.1297 26.4546 19.9457 26.443C18.7616 26.4314 17.7727 29.3983 17.7368 33.0697C17.7009 36.7411 18.6317 39.7268 19.8157 39.7383C20.9998 39.7499 21.9888 36.783 22.0246 33.1116Z" fill="#640EF1"/>
+                    <path d="M15.1576 32.2778C17.1728 29.2086 18.0041 26.1938 17.0144 25.5438C16.0245 24.8939 13.5884 26.855 11.5732 29.9242C9.55797 32.9933 8.72669 36.0081 9.71645 36.6581C10.7063 37.308 13.1423 35.3469 15.1576 32.2778Z" fill="#640EF1"/>
+                    <path d="M9.82334 27.8744C13.1781 26.3822 15.5074 24.2955 15.0261 23.2136C14.5449 22.1317 11.4353 22.4643 8.08062 23.9566C4.72593 25.4487 2.39655 27.5354 2.87779 28.6174C3.35902 29.6993 6.46865 29.3666 9.82334 27.8744Z" fill="#640EF1"/>
+                    <path d="M14.6236 20.1796C14.8037 19.0093 12.008 17.6078 8.37917 17.0492C4.75028 16.4906 1.66249 16.9866 1.48236 18.157C1.30223 19.3273 4.09797 20.7287 7.72684 21.2873C11.3557 21.8458 14.4435 21.3498 14.6236 20.1796Z" fill="#640EF1"/>
+                    <path d="M15.9265 17.3916C16.7106 16.5044 15.1161 13.8141 12.3649 11.3826C9.61381 8.95121 6.74791 7.6994 5.96376 8.58665C5.17962 9.47392 6.77418 12.1642 9.52533 14.5957C12.2765 17.0271 15.1424 18.2789 15.9265 17.3916Z" fill="#640EF1"/>
+                    <path d="M18.5211 15.7622C19.6605 15.4398 19.7737 12.3145 18.774 8.78163C17.7743 5.24875 16.0402 2.64616 14.9009 2.96857C13.7615 3.29098 13.6483 6.41629 14.648 9.94919C15.6477 13.482 17.3818 16.0846 18.5211 15.7622Z" fill="#640EF1"/>
+                    <path d="M25.5668 10.0591C26.636 6.54664 26.5845 3.4197 25.4517 3.07489C24.3189 2.73007 22.5338 5.29796 21.4646 8.81043C20.3955 12.3229 20.447 15.4498 21.5798 15.7946C22.7126 16.1394 24.4977 13.5716 25.5668 10.0591Z" fill="#640EF1"/>
+                    <path d="M30.6011 14.8052C33.3993 12.428 35.0461 9.76935 34.2794 8.86698C33.5128 7.96458 30.6229 9.16015 27.8249 11.5373C25.0267 13.9145 23.3799 16.5731 24.1465 17.4755C24.9132 18.3779 27.803 17.1824 30.6011 14.8052Z" fill="#640EF1"/>
+                    <path d="M32.2657 21.5215C35.9049 21.0346 38.7277 19.6886 38.5707 18.5149C38.4137 17.3413 35.3363 16.7846 31.6971 17.2714C28.058 17.7582 25.2351 19.1043 25.3921 20.278C25.5492 21.4516 28.6265 22.0084 32.2657 21.5215Z" fill="#640EF1"/>
+                    <path d="M36.9603 28.9528C37.4628 27.8806 35.175 25.7484 31.8504 24.1903C28.5258 22.6322 25.4234 22.2384 24.9209 23.3106C24.4184 24.3828 26.7062 26.515 30.0308 28.0731C33.3554 29.6311 36.4579 30.025 36.9603 28.9528Z" fill="#640EF1"/>
+                    <path d="M29.9671 36.8639C30.9695 36.2337 30.1978 33.203 28.2435 30.0947C26.2892 26.9865 23.8922 24.9778 22.8898 25.608C21.8874 26.2382 22.6591 29.269 24.6134 32.3772C26.5678 35.4854 28.9647 37.4942 29.9671 36.8639Z" fill="#640EF1"/>
+                    <path d="M70.164 15.376L65.936 31H60.644L58.18 20.864L55.632 31H50.368L46.112 15.376H50.9L53.112 26.548L55.744 15.376H60.812L63.472 26.492L65.656 15.376H70.164ZM86.7179 22.936C86.7179 23.384 86.6899 23.8507 86.6339 24.336H75.7979C75.8726 25.3067 76.1806 26.0533 76.7219 26.576C77.2819 27.08 77.9632 27.332 78.7659 27.332C79.9606 27.332 80.7912 26.828 81.2579 25.82H86.3539C86.0926 26.8467 85.6166 27.7707 84.9259 28.592C84.2539 29.4133 83.4046 30.0573 82.3779 30.524C81.3512 30.9907 80.2032 31.224 78.9339 31.224C77.4032 31.224 76.0406 30.8973 74.8459 30.244C73.6512 29.5907 72.7179 28.6573 72.0459 27.444C71.3739 26.2307 71.0379 24.812 71.0379 23.188C71.0379 21.564 71.3646 20.1453 72.0179 18.932C72.6899 17.7187 73.6232 16.7853 74.8179 16.132C76.0126 15.4787 77.3846 15.152 78.9339 15.152C80.4459 15.152 81.7899 15.4693 82.9659 16.104C84.1419 16.7387 85.0566 17.644 85.7099 18.82C86.3819 19.996 86.7179 21.368 86.7179 22.936ZM81.8179 21.676C81.8179 20.8547 81.5379 20.2013 80.9779 19.716C80.4179 19.2307 79.7179 18.988 78.8779 18.988C78.0752 18.988 77.3939 19.2213 76.8339 19.688C76.2926 20.1547 75.9566 20.8173 75.8259 21.676H81.8179ZM95.5998 31.224C94.2371 31.224 93.0238 30.9907 91.9598 30.524C90.8958 30.0573 90.0558 29.4227 89.4398 28.62C88.8238 27.7987 88.4785 26.884 88.4038 25.876H93.1358C93.1918 26.4173 93.4438 26.856 93.8918 27.192C94.3398 27.528 94.8905 27.696 95.5438 27.696C96.1411 27.696 96.5985 27.584 96.9158 27.36C97.2518 27.1173 97.4198 26.8093 97.4198 26.436C97.4198 25.988 97.1865 25.6613 96.7198 25.456C96.2531 25.232 95.4971 24.9893 94.4518 24.728C93.3318 24.4667 92.3985 24.196 91.6518 23.916C90.9051 23.6173 90.2611 23.16 89.7198 22.544C89.1785 21.9093 88.9078 21.06 88.9078 19.996C88.9078 19.1 89.1505 18.288 89.6358 17.56C90.1398 16.8133 90.8678 16.2253 91.8198 15.796C92.7905 15.3667 93.9385 15.152 95.2638 15.152C97.2238 15.152 98.7638 15.6373 99.8838 16.608C101.022 17.5787 101.676 18.8667 101.844 20.472H97.4198C97.3451 19.9307 97.1025 19.5013 96.6918 19.184C96.2998 18.8667 95.7771 18.708 95.1238 18.708C94.5638 18.708 94.1345 18.82 93.8358 19.044C93.5371 19.2493 93.3878 19.5387 93.3878 19.912C93.3878 20.36 93.6211 20.696 94.0878 20.92C94.5731 21.144 95.3198 21.368 96.3278 21.592C97.4851 21.8907 98.4278 22.1893 99.1558 22.488C99.8838 22.768 100.518 23.2347 101.06 23.888C101.62 24.5227 101.909 25.3813 101.928 26.464C101.928 27.3787 101.666 28.2 101.144 28.928C100.64 29.6373 99.9025 30.1973 98.9318 30.608C97.9798 31.0187 96.8691 31.224 95.5998 31.224ZM119.585 22.936C119.585 23.384 119.557 23.8507 119.501 24.336H108.665C108.74 25.3067 109.048 26.0533 109.589 26.576C110.149 27.08 110.83 27.332 111.633 27.332C112.828 27.332 113.658 26.828 114.125 25.82H119.221C118.96 26.8467 118.484 27.7707 117.793 28.592C117.121 29.4133 116.272 30.0573 115.245 30.524C114.218 30.9907 113.07 31.224 111.801 31.224C110.27 31.224 108.908 30.8973 107.713 30.244C106.518 29.5907 105.585 28.6573 104.913 27.444C104.241 26.2307 103.905 24.812 103.905 23.188C103.905 21.564 104.232 20.1453 104.885 18.932C105.557 17.7187 106.49 16.7853 107.685 16.132C108.88 15.4787 110.252 15.152 111.801 15.152C113.313 15.152 114.657 15.4693 115.833 16.104C117.009 16.7387 117.924 17.644 118.577 18.82C119.249 19.996 119.585 21.368 119.585 22.936ZM114.685 21.676C114.685 20.8547 114.405 20.2013 113.845 19.716C113.285 19.2307 112.585 18.988 111.745 18.988C110.942 18.988 110.261 19.2213 109.701 19.688C109.16 20.1547 108.824 20.8173 108.693 21.676H114.685ZM126.899 17.98C127.459 17.1213 128.159 16.4493 128.999 15.964C129.839 15.46 130.772 15.208 131.799 15.208V20.276H130.483C129.288 20.276 128.392 20.5373 127.795 21.06C127.198 21.564 126.899 22.46 126.899 23.748V31H122.111V15.376H126.899V17.98ZM141.116 26.52L144.504 15.376H149.6L144.056 31H138.148L132.604 15.376H137.728L141.116 26.52ZM166.343 22.936C166.343 23.384 166.315 23.8507 166.259 24.336H155.423C155.498 25.3067 155.806 26.0533 156.347 26.576C156.907 27.08 157.588 27.332 158.391 27.332C159.586 27.332 160.416 26.828 160.883 25.82H165.979C165.718 26.8467 165.242 27.7707 164.551 28.592C163.879 29.4133 163.03 30.0573 162.003 30.524C160.976 30.9907 159.828 31.224 158.559 31.224C157.028 31.224 155.666 30.8973 154.471 30.244C153.276 29.5907 152.343 28.6573 151.671 27.444C150.999 26.2307 150.663 24.812 150.663 23.188C150.663 21.564 150.99 20.1453 151.643 18.932C152.315 17.7187 153.248 16.7853 154.443 16.132C155.638 15.4787 157.01 15.152 158.559 15.152C160.071 15.152 161.415 15.4693 162.591 16.104C163.767 16.7387 164.682 17.644 165.335 18.82C166.007 19.996 166.343 21.368 166.343 22.936ZM161.443 21.676C161.443 20.8547 161.163 20.2013 160.603 19.716C160.043 19.2307 159.343 18.988 158.503 18.988C157.7 18.988 157.019 19.2213 156.459 19.688C155.918 20.1547 155.582 20.8173 155.451 21.676H161.443ZM171.109 31.224C170.269 31.224 169.578 30.9813 169.037 30.496C168.514 29.992 168.253 29.376 168.253 28.648C168.253 27.9013 168.514 27.276 169.037 26.772C169.578 26.268 170.269 26.016 171.109 26.016C171.93 26.016 172.602 26.268 173.125 26.772C173.666 27.276 173.937 27.9013 173.937 28.648C173.937 29.376 173.666 29.992 173.125 30.496C172.602 30.9813 171.93 31.224 171.109 31.224Z" fill="#080C2E"/>
+                </svg>
+            </div>
+            <ul id="navbar" class="flex flex-col bg-white -z-10 absolute top-0 left-0 h-screen w-1/2 py-32 shadow-[0_3px_10px_rgb(0,0,0,0.2)] gap-7 transform lg:bg-none lg:z-0 lg:flex lg:flex-row lg:static lg:h-auto lg:w-fit lg:py-0 lg:shadow-none">
+                <li class="group">
+                    <a href="#" class="text-xl lg:text-base text-primaryColor duration-300 ease-in-out group-hover:text-secondaryColor group-hover:font-semibold">Products</a>
+                </li>
+                <li class="group">
+                    <a href="#" class="text-xl lg:text-base text-primaryColor duration-300 ease-in-out group-hover:text-secondaryColor group-hover:font-semibold">Services</a>
+                </li>
+                <li class="group">
+                    <a href="#" class="text-xl lg:text-base text-primaryColor duration-300 ease-in-out group-hover:text-secondaryColor group-hover:font-semibold">Pricing</a>
+                </li>
+                <li class="group">
+                    <a href="#" class="text-xl lg:text-base text-primaryColor duration-300 ease-in-out group-hover:text-secondaryColor group-hover:font-semibold">Testimonials</a>
+                </li>
+                <li class="group">
+                    <a href="#" class="text-xl lg:text-base text-primaryColor duration-300 ease-in-out group-hover:text-secondaryColor group-hover:font-semibold">Blog</a>
+                </li>
+            </ul>
+            
+            <a href="#" class="text-base px-8 py-2.5 bg-primaryColor rounded-full text-white font-semibold duration-300 ease-in-out hover:bg-secondaryColor hidden lg:block">Sign In</a>
+
+            <div id="hamburger-button" class="lg:hidden">
+                <i class='bx bx-menu text-base p-2.5 bg-primaryColor rounded-full text-white font-semibold duration-300 ease-in-out cursor-pointer hover:bg-secondaryColor'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="flex flex-col justify-between items-center gap-10 md:gap-20 md:flex-row lg">
+                <div class="flex flex-col gap-7 text-center md:text-start md:basis-3/5">
+                    <div class="small-badges">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.99998 3.5H8.99998C7.04998 9.34 7.04998 15.66 8.99998 21.5H7.99998" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.5C16.95 9.34 16.95 15.66 15 21.5" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 16.5V15.5C8.84 17.45 15.16 17.45 21 15.5V16.5" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 9.50001C8.84 7.55001 15.16 7.55001 21 9.50001" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="text-sm text-center font-semibold text-primaryColor md:text-start">We host more than 120,000 websites</p>
+                    </div>
+    
+                    <div>
+                        <h1 class="font-['Clash_Display'] text-4xl lg:text-5xl xl:text-[70px] text-primaryColor leading-none">Grow Online <br>
+                        Business Faster.</h1>
+                        <p class="description mt-3">We provide a variety of servers to grow your users <br class="hidden lg:block">
+                        acquisition much user-friendly and boosting up sales.</p>
+                    </div>
+    
+                    <div class="flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start">
+                        <a href="#" class="btn text-white text-center bg-secondaryColor hover:bg-primaryColor w-full lg:w-fit">Try Free Trial</a>
+                        <a href="#" class="link-text flex items-center gap-[6px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12.2V13.9C20 17.05 18.2 18.4 15.5 18.4H6.5C3.8 18.4 2 17.05 2 13.9V8.5C2 5.35 3.8 4 6.5 4H9.2C9.07 4.38 9 4.8 9 5.25V9.15002C9 10.12 9.32 10.94 9.89 11.51C10.46 12.08 11.28 12.4 12.25 12.4V13.79C12.25 14.3 12.83 14.61 13.26 14.33L16.15 12.4H18.75C19.2 12.4 19.62 12.33 20 12.2Z" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 5.25V9.15002C22 10.64 21.24 11.76 20 12.2C19.62 12.33 19.2 12.4 18.75 12.4H16.15L13.26 14.33C12.83 14.61 12.25 14.3 12.25 13.79V12.4C11.28 12.4 10.46 12.08 9.89 11.51C9.32 10.94 9 10.12 9 9.15002V5.25C9 4.8 9.07 4.38 9.2 4C9.64 2.76 10.76 2 12.25 2H18.75C20.7 2 22 3.3 22 5.25Z" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.40002 22H14.6" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 18.4V22" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.4955 7.25H18.5045" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6957 7.25H15.7047" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.8954 7.25H12.9044" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Schedule a Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center flex justify-end">
+                    <img src="images/placeholder-image.jpg" alt="" class="w-[300px] border rounded-2xl">
+                </div>
+            </div>
+        </section>
+    
+        <section id="best-choice">
+            <h1 class="title-section text-center">Your Best Choice</h1>
+    
+            <div class="mt-[30px] grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-4">
+                <div class="card group">
+                    <div class="absolute top-3 right-5 ease-in-out duration-300 opacity-0 group-hover:opacity-100">
+                        <svg width="178" height="221" viewBox="0 0 178 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_1_107)">
+                            <ellipse cx="98.15" cy="102.527" rx="32.0478" ry="76.7916" transform="rotate(30 98.15 102.527)" fill="#424560"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_f_1_107" x="0.77005" y="-15.8951" width="194.76" height="236.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_1_107"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+    
+                    <div class="relative flex flex-col gap-[30px] z-10 text-secondaryColor group-hover:text-white">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.5292 27.6V16.2917C31.5292 15.2375 30.6667 14.375 29.6126 14.375H24.0542" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26.9292 11.5L23.4792 14.375L26.9292 17.25" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.4708 19.55V27.6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.7584 18.975C16.8226 18.975 18.4959 17.3017 18.4959 15.2375C18.4959 13.1734 16.8226 11.5 14.7584 11.5C12.6942 11.5 11.0209 13.1734 11.0209 15.2375C11.0209 17.3017 12.6942 18.975 14.7584 18.975Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.4709 34.5C16.3762 34.5 17.9208 32.9554 17.9208 31.05C17.9208 29.1446 16.3762 27.6 14.4709 27.6C12.5655 27.6 11.0209 29.1446 11.0209 31.05C11.0209 32.9554 12.5655 34.5 14.4709 34.5Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M31.5292 34.5C33.4346 34.5 34.9792 32.9554 34.9792 31.05C34.9792 29.1446 33.4346 27.6 31.5292 27.6C29.6238 27.6 28.0792 29.1446 28.0792 31.05C28.0792 32.9554 29.6238 34.5 31.5292 34.5Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.25 42.1667H28.75C38.3334 42.1667 42.1667 38.3334 42.1667 28.75V17.25C42.1667 7.66671 38.3334 3.83337 28.75 3.83337H17.25C7.66671 3.83337 3.83337 7.66671 3.83337 17.25V28.75C3.83337 38.3334 7.66671 42.1667 17.25 42.1667Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+        
+                        <div>
+                            <h2 class="group-hover:text-white">Extra Layers</h2>
+                            <p class="text-base text-descriptionColor mt-1">Making your project more secure avoiding DDoS</p>
+                        </div>
+                    </div>
+                    <a href="#" class="link-text absolute bottom-5 group-hover:text-white">Learn More</a>
+                </div>
+    
+                <div class="card group">
+                    <div class="absolute top-3 right-5 ease-in-out duration-300 opacity-0 group-hover:opacity-100">
+                        <svg width="178" height="221" viewBox="0 0 178 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_1_107)">
+                            <ellipse cx="98.15" cy="102.527" rx="32.0478" ry="76.7916" transform="rotate(30 98.15 102.527)" fill="#424560"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_f_1_107" x="0.77005" y="-15.8951" width="194.76" height="236.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_1_107"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+    
+                    <div class="relative flex flex-col gap-[30px] z-10 text-secondaryColor group-hover:text-white">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.7633 4.33161L37.2408 11.0591C38.6975 11.8449 38.6975 14.0874 37.2408 14.8733L24.7633 21.6008C23.6516 22.1949 22.3483 22.1949 21.2366 21.6008L8.75913 14.8733C7.30246 14.0874 7.30246 11.8449 8.75913 11.0591L21.2366 4.33161C22.3483 3.73744 23.6516 3.73744 24.7633 4.33161Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.91921 19.4159L18.515 25.2234C19.9525 25.9517 20.8725 27.4275 20.8725 29.0375V40.0009C20.8725 41.5917 19.205 42.6075 17.7867 41.8984L6.19087 36.0909C4.75337 35.3625 3.83337 33.8867 3.83337 32.2767V21.3134C3.83337 19.7225 5.50087 18.7067 6.91921 19.4159Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M39.0808 19.4159L27.4849 25.2234C26.0474 25.9517 25.1274 27.4275 25.1274 29.0375V40.0009C25.1274 41.5917 26.7949 42.6075 28.2133 41.8984L39.8091 36.0909C41.2466 35.3625 42.1666 33.8867 42.1666 32.2767V21.3134C42.1666 19.7225 40.4991 18.7067 39.0808 19.4159Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+        
+                        <div>
+                            <h2 class="group-hover:text-white">Customizable</h2>
+                            <p class="text-base text-descriptionColor mt-1">Only install what your business needs to grow</p>
+                        </div>
+                    </div>
+                    <a href="#" class="link-text absolute bottom-5 group-hover:text-white">Learn More</a>
+                </div>
+    
+                <div class="card group">
+                    <div class="absolute top-3 right-5 ease-in-out duration-300 opacity-0 group-hover:opacity-100">
+                        <svg width="178" height="221" viewBox="0 0 178 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_1_107)">
+                            <ellipse cx="98.15" cy="102.527" rx="32.0478" ry="76.7916" transform="rotate(30 98.15 102.527)" fill="#424560"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_f_1_107" x="0.77005" y="-15.8951" width="194.76" height="236.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_1_107"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+    
+                    <div class="relative flex flex-col gap-[30px] z-10 text-secondaryColor group-hover:text-white">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1866 34.7874V30.8199" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M23 34.7875V26.8525" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M32.8134 34.7875V22.8658" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M32.8133 11.2125L31.9316 12.2475C27.0441 17.9592 20.4891 22.0034 13.1866 23.8242" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M27.1975 11.2125H32.8133V16.8092" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.25 42.1667H28.75C38.3334 42.1667 42.1667 38.3334 42.1667 28.75V17.25C42.1667 7.66671 38.3334 3.83337 28.75 3.83337H17.25C7.66671 3.83337 3.83337 7.66671 3.83337 17.25V28.75C3.83337 38.3334 7.66671 42.1667 17.25 42.1667Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+        
+                        <div>
+                            <h2 class="group-hover:text-white">AI Automation</h2>
+                            <p class="text-base text-descriptionColor mt-1">Decide the business flow based on latest reports</p>
+                        </div>
+                    </div>
+                    <a href="#" class="link-text absolute bottom-5 group-hover:text-white">Learn More</a>
+                </div>
+                
+                <div class="card group">
+                    <div class="absolute top-3 right-5 ease-in-out duration-300 opacity-0 group-hover:opacity-100">
+                        <svg width="178" height="221" viewBox="0 0 178 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_1_107)">
+                            <ellipse cx="98.15" cy="102.527" rx="32.0478" ry="76.7916" transform="rotate(30 98.15 102.527)" fill="#424560"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_f_1_107" x="0.77005" y="-15.8951" width="194.76" height="236.845" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_1_107"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+    
+                    <div class="relative flex flex-col gap-[30px] z-10 text-secondaryColor group-hover:text-white">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5 11.9791V15.8125" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M42.1666 23V17.25C42.1666 7.66671 38.3333 3.83337 28.7499 3.83337H17.2499C7.66659 3.83337 3.83325 7.66671 3.83325 17.25V28.75C3.83325 38.3334 7.66659 42.1667 17.2499 42.1667H22.9999" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.1667 11.9791V15.8125" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 30.6666V34.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.1667 30.6666V34.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26.8333 13.8959H34.4999" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.83325 23H42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M41.3232 38.9658C40.2499 40.825 38.2374 42.0708 35.9374 42.0708C32.5066 42.0708 30.3982 38.6208 30.3982 38.6208M30.5324 32.7558C31.6057 30.8775 33.6182 29.6316 35.9374 29.6316C40.0966 29.6316 42.1666 33.0816 42.1666 33.0816M42.1666 29.2291V33.0625H38.3332M34.2315 38.6016H30.3982V42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+        
+                        <div>
+                            <h2 class="group-hover:text-white">Auto-Scaling</h2>
+                            <p class="text-base text-descriptionColor mt-1">Have a long weekend without worrying any loss</p>
+                        </div>
+                    </div>
+                    <a href="#" class="link-text absolute bottom-5 group-hover:text-white">Learn More</a>
+                </div>
+            </div>
+        </section>
+    
+        <section id="bnefits">
+            <div class="flex flex-col justify-between items-center gap-10 md:gap-20 lg:flex-row lg">
+                <div>
+                    <img src="images/placeholder-image.jpg" alt="" class="w-[500px] border rounded-2xl">
+                </div>
+                <div class="flex flex-col gap-10">
+                    <div>
+                        <h1 class="title-section font-['Clash_Display'] leading-tight">We Have Very <br class="hidden lg:block">Strong Ecosystem</h1>
+                        <p class="description mt-2">
+                            We provide a variety of servers to grow your users <br class="md:hidden xl:block">acquisition much user-friendly and boosting up sales.
+                        </p>
+                    </div>
+    
+                    <div class="flex flex-col gap-5">
+                        <div class="flex gap-4 items-center bg-white p-5 rounded-2xl">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.1925 42.1667H28.6925C38.2759 42.1667 42.1092 38.3334 42.1092 28.75V17.25C42.1092 7.66671 38.2759 3.83337 28.6925 3.83337H17.1925C7.60921 3.83337 3.77588 7.66671 3.77588 17.25V28.75C3.77588 38.3334 7.60921 42.1667 17.1925 42.1667Z" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.77588 24.3417L15.2759 24.3034C16.7134 24.3034 18.3234 25.3959 18.86 26.7375L21.045 32.2575C21.5434 33.5034 22.3292 33.5034 22.8275 32.2575L27.2167 21.1217C27.6384 20.0484 28.4242 20.01 28.9609 21.0259L30.9542 24.8017C31.5484 25.9325 33.0817 26.8525 34.3467 26.8525H42.1284" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                            <div>
+                                <h2>$880 Mio</h2>
+                                <p class="description">Company budget saved</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center bg-white p-5 rounded-2xl">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.4 38.3333H27.6C35.2666 38.3333 38.3333 35.2666 38.3333 27.6V18.4C38.3333 10.7333 35.2666 7.66663 27.6 7.66663H18.4C10.7333 7.66663 7.66663 10.7333 7.66663 18.4V27.6C7.66663 35.2666 10.7333 38.3333 18.4 38.3333Z" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.125 32.5833H25.875C30.6666 32.5833 32.5833 30.6666 32.5833 25.875V20.125C32.5833 15.3333 30.6666 13.4166 25.875 13.4166H20.125C15.3333 13.4166 13.4166 15.3333 13.4166 20.125V25.875C13.4166 30.6666 15.3333 32.5833 20.125 32.5833Z" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.3525 7.66671V3.83337" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 7.66671V3.83337" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.6666 7.66671V3.83337" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M38.3334 15.3334H42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M38.3334 23H42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M38.3334 30.6666H42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.6666 38.3334V42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.0192 38.3334V42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.3525 38.3334V42.1667" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.83337 15.3334H7.66671" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.83337 23H7.66671" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.83337 30.6666H7.66671" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 18.5917L21.1984 21.735C20.7959 22.425 21.1217 23 21.9267 23H24.0734C24.8784 23 25.2042 23.575 24.8017 24.265L23 27.4083" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+    
+                            <div>
+                                <h2>450,392</h2>
+                                <p class="description">All servers available</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center bg-white p-5 rounded-2xl">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6182 21.3135C1.64825 21.946 1.64825 34.9985 10.6182 35.631H14.2983" stroke="#640EF1" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.7141 21.3134C4.56164 4.19757 30.5132 -2.64492 33.484 15.3334C41.7832 16.3876 45.1375 27.4467 38.8508 32.9476C36.9341 34.6917 34.4616 35.6501 31.8741 35.6309H31.7015" stroke="#640EF1" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M32.5833 31.6825C32.5833 33.1008 32.2766 34.4424 31.7016 35.6308C31.5483 35.9758 31.3758 36.3016 31.1842 36.6083C29.5358 39.3875 26.4883 41.2658 23 41.2658C19.5116 41.2658 16.4641 39.3875 14.8158 36.6083C14.6241 36.3016 14.4517 35.9758 14.2983 35.6308C13.7233 34.4424 13.4166 33.1008 13.4166 31.6825C13.4166 26.3925 17.71 22.0991 23 22.0991C28.29 22.0991 32.5833 26.3925 32.5833 31.6825Z" stroke="#640EF1" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.01 31.6825L21.9075 33.58L25.99 29.8042" stroke="#640EF1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                            <div>
+                                <h2>189 Mio</h2>
+                                <p class="description">Websites are running good</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-col gap-5 lg:items-center lg:flex-row">
+                        <a href="#" class="btn text-white bg-secondaryColor text-center hover:bg-primaryColor">Explore More</a>
+    
+                        <a href="#" class="link-text flex justify-center items-center gap-[6px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12.2V13.9C20 17.05 18.2 18.4 15.5 18.4H6.5C3.8 18.4 2 17.05 2 13.9V8.5C2 5.35 3.8 4 6.5 4H9.2C9.07 4.38 9 4.8 9 5.25V9.15002C9 10.12 9.32 10.94 9.89 11.51C10.46 12.08 11.28 12.4 12.25 12.4V13.79C12.25 14.3 12.83 14.61 13.26 14.33L16.15 12.4H18.75C19.2 12.4 19.62 12.33 20 12.2Z" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 5.25V9.15002C22 10.64 21.24 11.76 20 12.2C19.62 12.33 19.2 12.4 18.75 12.4H16.15L13.26 14.33C12.83 14.61 12.25 14.3 12.25 13.79V12.4C11.28 12.4 10.46 12.08 9.89 11.51C9.32 10.94 9 10.12 9 9.15002V5.25C9 4.8 9.07 4.38 9.2 4C9.64 2.76 10.76 2 12.25 2H18.75C20.7 2 22 3.3 22 5.25Z" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.40002 22H14.6" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 18.4V22" stroke="#640EF1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.4955 7.25H18.5045" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6957 7.25H15.7047" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.8954 7.25H12.9044" stroke="#640EF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Schedule a Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="showcase">
+            <div class="text-center">
+                <h1 class="title-section">Our Showcase</h1>
+                <p class="description mt-[30px]">They built amazing website to help more people around the world <br class="hidden md:block">by using our recommendation services and products</p>
+            </div>
+            <div class="mt-[30px] grid grid-cols-1 gap-[30px] md:grid-cols-3">
+                <div class="group relative cursor-pointer">
+                    <div class="absolute bottom-8 w-full flex justify-center opacity-0 ease-in-out duration-300 group-hover:opacity-100">
+                        <a href="#" class="view-details-button">View Details</a>
+                    </div>
+                    <img src="images/placeholder-image.jpg" alt="" class="border-0 ease-in-out duration-300 group-hover:border-4 group-hover:border-secondaryColor rounded-2xl z-0">
+                </div>
+                <div class="group relative cursor-pointer">
+                    <div class="absolute bottom-8 w-full flex justify-center opacity-0 ease-in-out duration-300 group-hover:opacity-100">
+                        <a href="#" class="view-details-button">View Details</a>
+                    </div>
+                    <img src="images/placeholder-image.jpg" alt="" class="border-0 ease-in-out duration-300 group-hover:border-4 group-hover:border-secondaryColor rounded-2xl z-0">
+                </div>
+                <div class="group relative cursor-pointer">
+                    <div class="absolute bottom-8 w-full flex justify-center opacity-0 ease-in-out duration-300 group-hover:opacity-100">
+                        <a href="#" class="view-details-button">View Details</a>
+                    </div>
+                    <img src="images/placeholder-image.jpg" alt="" class="border-0 ease-in-out duration-300 group-hover:border-4 group-hover:border-secondaryColor rounded-2xl z-0">
+                </div>
+            </div>
+        </section>
+    
+        <section id="faq" class="mb-96">
+            <h1 class="title-section text-center">Frequently Asked Questions</h1>
+            <div class="mt-[30px] flex flex-col gap-[30px] md:flex-row">
+                <div class="flex flex-col gap-[30px]">
+                    <div class="faq-Card">
+                        <div class="flex flex-col gap-5">
+                            <h3>Why do we need to use Kapp?</h3>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="white"/>
+                                <path d="M20.9401 12.7124L16.0501 17.6024C15.4726 18.1799 14.5276 18.1799 13.9501 17.6024L9.06006 12.7124" stroke="#080C2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="faq-Card">
+                        <div class="flex flex-col gap-5">
+                            <h3>Do we need to pay 6 months per item?</h3>
+                            <p class="description">
+                                Kapp is able to develop by themselve without removing the parents permission and lorem dolor si amet fully run network at 100% avoiding data-loss at any moments
+                            </p>
+                            <a href="#" class="link-text">Learn More</a>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="30" width="30" height="30" rx="15" transform="rotate(-180 30 30)" fill="#080C2E"/>
+                                <path d="M9.05994 17.2876L13.9499 12.3976C14.5274 11.8201 15.4724 11.8201 16.0499 12.3976L20.9399 17.2876" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="faq-Card">
+                        <div class="flex flex-col gap-5">
+                            <h3>How to migrate from other service?</h3>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="white"/>
+                                <path d="M20.9401 12.7124L16.0501 17.6024C15.4726 18.1799 14.5276 18.1799 13.9501 17.6024L9.06006 12.7124" stroke="#080C2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[30px]">
+                    <div class="faq-Card">
+                        <div class="flex flex-col gap-5">
+                            <h3>What if data doesn't get stored?</h3>
+                            <p class="description">
+                                Kapp is able to develop by themselve without removing the parents permission and lorem dolor si amet fully run network at 100% avoiding data-loss at any moments
+                            </p>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="30" width="30" height="30" rx="15" transform="rotate(-180 30 30)" fill="#080C2E"/>
+                                <path d="M9.05994 17.2876L13.9499 12.3976C14.5274 11.8201 15.4724 11.8201 16.0499 12.3976L20.9399 17.2876" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="faq-Card">
+                        <div class="flex flex-col gap-5">
+                            <h3>Can we guarantee no any loss at all?</h3>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="white"/>
+                                <path d="M20.9401 12.7124L16.0501 17.6024C15.4726 18.1799 14.5276 18.1799 13.9501 17.6024L9.06006 12.7124" stroke="#080C2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-primaryColor rounded-2xl p-5 flex justify-between">
+                        <div class="flex gap-3 items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12.2V13.9C20 17.05 18.2 18.4 15.5 18.4H6.5C3.8 18.4 2 17.05 2 13.9V8.5C2 5.35 3.8 4 6.5 4H9.2C9.07 4.38 9 4.8 9 5.25V9.15002C9 10.12 9.32 10.94 9.89 11.51C10.46 12.08 11.28 12.4 12.25 12.4V13.79C12.25 14.3 12.83 14.61 13.26 14.33L16.15 12.4H18.75C19.2 12.4 19.62 12.33 20 12.2Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 5.25V9.15002C22 10.64 21.24 11.76 20 12.2C19.62 12.33 19.2 12.4 18.75 12.4H16.15L13.26 14.33C12.83 14.61 12.25 14.3 12.25 13.79V12.4C11.28 12.4 10.46 12.08 9.89 11.51C9.32 10.94 9 10.12 9 9.15002V5.25C9 4.8 9.07 4.38 9.2 4C9.64 2.76 10.76 2 12.25 2H18.75C20.7 2 22 3.3 22 5.25Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.40002 22H14.6" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 18.3999V21.9999" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.4955 7.25H18.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6957 7.25H15.7047" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.8954 7.25H12.9044" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="text-base text-white font-semibold">Send e-mail to us for other questions</p>
+                        </div>
+                        <a href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="30" width="30" height="30" rx="15" transform="rotate(-90 0 30)" fill="white"/>
+                                <path d="M12.7124 9.05994L17.6024 13.9499C18.1799 14.5274 18.1799 15.4724 17.6024 16.0499L12.7124 20.9399" stroke="#080C2E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primaryColor relative mt-[900px] sm:mt-[650px] md:mt-[550px] lg:mt-96">
+        <div id="closing" class="absolute transform -translate-y-1/2 w-full flex justify-center">
+            <div class="grid grid-cols-1 gap-10 bg-secondaryColor rounded-[40px] p-12 mx-[10%] lg:grid-cols-2">
+                <div class="flex flex-col gap-10">
+                    <div class="small-badges">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.99998 3.5H8.99998C7.04998 9.34 7.04998 15.66 8.99998 21.5H7.99998" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.5C16.95 9.34 16.95 15.66 15 21.5" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 16.5V15.5C8.84 17.45 15.16 17.45 21 15.5V16.5" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 9.50001C8.84 7.55001 15.16 7.55001 21 9.50001" stroke="#080C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="text-sm text-center font-semibold text-primaryColor md:text-start">We host more than 120,000 websites</p>
+                    </div>
+    
+                    <div>
+                        <h1 class="font-['Clash_Display'] font-semibold text-white text-4xl lg:text-5xl">Start Growing Today</h1>
+                        <p class="description mt-2 !text-white">We provide a variety of servers to grow your users <br class="hidden xl:block">
+                        acquisition much user-friendly and boosting up sales.</p>
+                    </div>
+    
+                    <div class="flex flex-col gap-5 md:flex-row lg:flex-col xl:flex-row">
+                        <a href="#" class="btn bg-[#FFD15A] text-center text-primaryColor hover:bg-primaryColor hover:text-white">Explore More</a>
+                        <a href="#" class="link-text !text-white flex justify-center items-center gap-[6px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12.2V13.9C20 17.05 18.2 18.4 15.5 18.4H6.5C3.8 18.4 2 17.05 2 13.9V8.5C2 5.35 3.8 4 6.5 4H9.2C9.07 4.38 9 4.8 9 5.25V9.15002C9 10.12 9.32 10.94 9.89 11.51C10.46 12.08 11.28 12.4 12.25 12.4V13.79C12.25 14.3 12.83 14.61 13.26 14.33L16.15 12.4H18.75C19.2 12.4 19.62 12.33 20 12.2Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 5.25V9.15002C22 10.64 21.24 11.76 20 12.2C19.62 12.33 19.2 12.4 18.75 12.4H16.15L13.26 14.33C12.83 14.61 12.25 14.3 12.25 13.79V12.4C11.28 12.4 10.46 12.08 9.89 11.51C9.32 10.94 9 10.12 9 9.15002V5.25C9 4.8 9.07 4.38 9.2 4C9.64 2.76 10.76 2 12.25 2H18.75C20.7 2 22 3.3 22 5.25Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.40002 22H14.6" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 18.3999V21.9999" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.4955 7.25H18.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6957 7.25H15.7047" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.8954 7.25H12.9044" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Schedule a Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <path d="M17.25 42.1666H28.75C38.3334 42.1666 42.1667 38.3333 42.1667 28.7499V17.2499C42.1667 7.66659 38.3334 3.83325 28.75 3.83325H17.25C7.66671 3.83325 3.83337 7.66659 3.83337 17.2499V28.7499C3.83337 38.3333 7.66671 42.1666 17.25 42.1666Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                     <path d="M18.3999 17.1924L13.6274 21.9649C13.0716 22.5207 13.0716 23.4599 13.6274 24.0157L18.3999 28.7882" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                     <path d="M27.6 17.1924L32.3725 21.9649C32.9283 22.5207 32.9283 23.4599 32.3725 24.0157L27.6 28.7882" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">Web Crawl</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.4001 38.3334H27.6001C35.2667 38.3334 38.3334 35.2667 38.3334 27.6001V18.4001C38.3334 10.7334 35.2667 7.66675 27.6001 7.66675H18.4001C10.7334 7.66675 7.66675 10.7334 7.66675 18.4001V27.6001C7.66675 35.2667 10.7334 38.3334 18.4001 38.3334Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20.1251 32.5834H25.8751C30.6667 32.5834 32.5834 30.6667 32.5834 25.8751V20.1251C32.5834 15.3334 30.6667 13.4167 25.8751 13.4167H20.1251C15.3334 13.4167 13.4167 15.3334 13.4167 20.1251V25.8751C13.4167 30.6667 15.3334 32.5834 20.1251 32.5834Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.3525 7.66659V3.83325" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23 7.66659V3.83325" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M30.6667 7.66659V3.83325" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M38.3333 15.3333H42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M38.3333 23H42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M38.3333 30.6667H42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M30.6667 38.3333V42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23.0193 38.3333V42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.3525 38.3333V42.1666" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.83325 15.3333H7.66659" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.83325 23H7.66659" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.83325 30.6667H7.66659" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23 18.5916L21.1984 21.7349C20.7959 22.4249 21.1217 22.9999 21.9267 22.9999H24.0734C24.8784 22.9999 25.2042 23.5749 24.8017 24.2649L23 27.4082" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">Fast Report</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="47" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.1059 5.02424L10.5417 8.6084C8.33755 9.43256 6.53589 12.0392 6.53589 14.3967V28.6375C6.53589 30.8992 8.03091 33.87 9.85174 35.2309L18.0934 41.3834C20.7959 43.4151 25.2425 43.4151 27.945 41.3834L36.1867 35.2309C38.0076 33.87 39.5025 30.8992 39.5025 28.6375V14.3967C39.5025 12.0392 37.7009 9.43256 35.4967 8.6084L25.9325 5.02424C24.3034 4.43007 21.6967 4.43007 20.1059 5.02424Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M23.0001 21.6801C22.9234 21.6801 22.8276 21.6801 22.7509 21.6801C20.9492 21.6226 19.5117 20.1275 19.5117 18.3067C19.5117 16.4475 21.0259 14.9333 22.8851 14.9333C24.7442 14.9333 26.2584 16.4475 26.2584 18.3067C26.2393 20.1467 24.8017 21.6226 23.0001 21.6801Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19.1859 27.0467C17.3459 28.2734 17.3459 30.2858 19.1859 31.5125C21.2751 32.9117 24.7059 32.9117 26.7951 31.5125C28.6351 30.2858 28.6351 28.2734 26.7951 27.0467C24.7251 25.6475 21.2942 25.6475 19.1859 27.0467Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">Anti-DDoS</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="47" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.1866 35.2876V31.3201" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M23 35.2875V27.3525" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M32.8134 35.2874V23.3657" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M32.8133 11.7124L31.9316 12.7474C27.0441 18.4591 20.4891 22.5032 13.1866 24.3241" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M27.1975 11.7124H32.8133V17.3091" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.25 42.6666H28.75C38.3334 42.6666 42.1667 38.8333 42.1667 29.2499V17.7499C42.1667 8.16659 38.3334 4.33325 28.75 4.33325H17.25C7.66671 4.33325 3.83337 8.16659 3.83337 17.7499V29.2499C3.83337 38.8333 7.66671 42.6666 17.25 42.6666Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">Auto-Scale</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="47" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.4583 42.6667V29.25" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.4583 10.0833V4.33325" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M33.5417 42.6667V36.9167" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M33.5417 17.7499V4.33325" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.2083 13.9166V25.4166C18.2083 27.5249 17.2499 29.2499 14.3749 29.2499H10.5416C7.66659 29.2499 6.70825 27.5249 6.70825 25.4166V13.9166C6.70825 11.8083 7.66659 10.0833 10.5416 10.0833H14.3749C17.2499 10.0833 18.2083 11.8083 18.2083 13.9166Z" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M39.2917 21.5833V33.0833C39.2917 35.1917 38.3334 36.9167 35.4584 36.9167H31.6251C28.7501 36.9167 27.7917 35.1917 27.7917 33.0833V21.5833C27.7917 19.475 28.7501 17.75 31.6251 17.75H35.4584C38.3334 17.75 39.2917 19.475 39.2917 21.5833Z" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">AI Perform</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative closing-card group">
+                        <div class="absolute top-3 right-5 hidden group-hover:block">
+                            <svg width="92" height="126" viewBox="0 0 92 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_1_627)">
+                                <ellipse cx="46.0685" cy="62.9834" rx="8.84722" ry="48.5082" transform="rotate(30 46.0685 62.9834)" fill="#424560"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_f_1_627" x="0.626221" y="0.738525" width="90.8845" height="124.49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_1_627"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+    
+                        <div class="relative z-10 flex flex-col items-center gap-y-3">
+                             <div class="text-secondaryColor group-hover:text-white">
+                                 <svg width="46" height="47" viewBox="0 0 46 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.0082 36.8784H13.9916C13.1866 36.8784 12.2857 36.2459 12.0174 35.4793L4.08239 13.2843C2.95156 10.1026 4.27406 9.1251 6.99573 11.0801L14.4707 16.4276C15.7166 17.2901 17.1349 16.8493 17.6716 15.4501L21.0449 6.46094C22.1182 3.58594 23.9007 3.58594 24.9741 6.46094L28.3474 15.4501C28.8841 16.8493 30.3024 17.2901 31.5291 16.4276L38.5441 11.4251C41.5341 9.27844 42.9716 10.3709 41.7449 13.8401L34.0016 35.5176C33.7141 36.2459 32.8132 36.8784 32.0082 36.8784Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.4583 42.6667H33.5416" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.2083 27.3333H27.7916" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                             </div>
+                            <div class="text-center">
+                                <h3 class=" text-primaryColor group-hover:text-white">Top Plugins+</h3>
+                                <a href="#" class="description opacity-0 font-semibold group-hover:opacity-100">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-[10%] pt-[900px] sm:pt-[650px] md:pt-[550px] lg:pt-96">
+        <div class="flex flex-col gap-20 lg:flex-row lg:gap-x-[10%]">
+          <div class="flex flex-col gap-[30px] lg:max-w-[250px]">
+            <svg
+              width="175"
+              height="42"
+              viewBox="0 0 175 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.0246 33.1115C22.0605 29.4401 21.1297 26.4545 19.9457 26.4429C18.7616 26.4314 17.7727 29.3983 17.7368 33.0696C17.7009 36.7411 18.6317 39.7267 19.8157 39.7383C20.9998 39.7499 21.9888 36.783 22.0246 33.1115Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M15.1576 32.2777C17.1728 29.2086 18.0041 26.1937 17.0144 25.5438C16.0245 24.8939 13.5884 26.855 11.5732 29.9241C9.55797 32.9933 8.72669 36.0081 9.71645 36.6581C10.7063 37.308 13.1423 35.3469 15.1576 32.2777Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M9.82334 27.8744C13.1781 26.3822 15.5074 24.2955 15.0261 23.2136C14.5449 22.1316 11.4353 22.4643 8.08062 23.9565C4.72593 25.4487 2.39655 27.5354 2.87779 28.6173C3.35902 29.6992 6.46865 29.3666 9.82334 27.8744Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M14.6236 20.1795C14.8037 19.0092 12.008 17.6076 8.37917 17.0491C4.75028 16.4905 1.66249 16.9865 1.48236 18.1568C1.30223 19.3272 4.09797 20.7286 7.72684 21.2872C11.3557 21.8457 14.4435 21.3497 14.6236 20.1795Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M15.9265 17.3917C16.7106 16.5045 15.1161 13.8142 12.3649 11.3827C9.61381 8.9513 6.74791 7.6995 5.96376 8.58674C5.17962 9.47401 6.77418 12.1643 9.52533 14.5958C12.2765 17.0272 15.1424 18.279 15.9265 17.3917Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M18.5211 15.7623C19.6605 15.4399 19.7737 12.3146 18.774 8.7817C17.7743 5.24883 16.0402 2.64624 14.9009 2.96865C13.7615 3.29106 13.6483 6.41637 14.648 9.94927C15.6477 13.4821 17.3818 16.0847 18.5211 15.7623Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M25.5668 10.0592C26.636 6.54673 26.5845 3.41979 25.4517 3.07498C24.3189 2.73017 22.5338 5.29805 21.4646 8.81053C20.3955 12.323 20.447 15.4499 21.5798 15.7947C22.7126 16.1395 24.4977 13.5717 25.5668 10.0592Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M30.6011 14.8053C33.3993 12.4281 35.0461 9.76948 34.2794 8.8671C33.5128 7.9647 30.6229 9.16028 27.8249 11.5374C25.0267 13.9146 23.3799 16.5732 24.1465 17.4756C24.9132 18.378 27.803 17.1825 30.6011 14.8053Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M32.2657 21.5215C35.9049 21.0347 38.7277 19.6886 38.5707 18.5149C38.4137 17.3413 35.3363 16.7846 31.6971 17.2714C28.058 17.7583 25.2351 19.1043 25.3921 20.278C25.5492 21.4516 28.6265 22.0084 32.2657 21.5215Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M36.9603 28.9528C37.4628 27.8806 35.175 25.7484 31.8504 24.1903C28.5258 22.6322 25.4234 22.2384 24.9209 23.3105C24.4184 24.3828 26.7062 26.515 30.0308 28.0731C33.3554 29.6311 36.4579 30.025 36.9603 28.9528Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M29.9671 36.864C30.9695 36.2338 30.1978 33.203 28.2435 30.0948C26.2892 26.9866 23.8922 24.9778 22.8898 25.6081C21.8874 26.2383 22.6591 29.269 24.6134 32.3773C26.5678 35.4855 28.9647 37.4943 29.9671 36.864Z"
+                fill="#640EF1"
+              />
+              <path
+                d="M70.5 15.376L66.496 31H61.148L58.32 20.528L55.464 31H50.116L46.112 15.376H50.9L52.972 26.632L55.884 15.376H60.98L63.976 26.66L66.048 15.376H70.5ZM87.074 22.768C87.074 23.16 87.0274 23.5893 86.934 24.056H76.098C76.154 25.232 76.4527 26.0813 76.994 26.604C77.5354 27.108 78.226 27.36 79.066 27.36C79.7754 27.36 80.3634 27.1827 80.83 26.828C81.2967 26.4733 81.6047 26.016 81.754 25.456H86.822C86.6167 26.5573 86.1687 27.5467 85.478 28.424C84.7874 29.2827 83.91 29.964 82.846 30.468C81.782 30.9533 80.5967 31.196 79.29 31.196C77.7594 31.196 76.3967 30.8787 75.202 30.244C74.026 29.5907 73.102 28.6573 72.43 27.444C71.758 26.2307 71.422 24.812 71.422 23.188C71.422 21.5453 71.7487 20.1267 72.402 18.932C73.074 17.7187 74.0074 16.7947 75.202 16.16C76.3967 15.5067 77.7594 15.18 79.29 15.18C80.8394 15.18 82.202 15.4973 83.378 16.132C84.554 16.7667 85.4594 17.6627 86.094 18.82C86.7474 19.9587 87.074 21.2747 87.074 22.768ZM82.23 22.04C82.2487 21.0133 81.9687 20.248 81.39 19.744C80.83 19.2213 80.13 18.96 79.29 18.96C78.4127 18.96 77.6847 19.2213 77.106 19.744C76.5274 20.2667 76.2007 21.032 76.126 22.04H82.23ZM95.254 15.18C97.2326 15.18 98.81 15.6747 99.986 16.664C101.181 17.6533 101.927 18.96 102.226 20.584H97.746C97.6153 19.9493 97.3166 19.4547 96.85 19.1C96.402 18.7267 95.8326 18.54 95.142 18.54C94.6006 18.54 94.19 18.6613 93.91 18.904C93.63 19.128 93.49 19.4547 93.49 19.884C93.49 20.3693 93.742 20.7333 94.246 20.976C94.7686 21.2187 95.5806 21.4613 96.682 21.704C97.8766 21.984 98.8566 22.2733 99.622 22.572C100.387 22.852 101.05 23.3187 101.61 23.972C102.17 24.6253 102.45 25.5027 102.45 26.604C102.45 27.5 102.207 28.2933 101.722 28.984C101.237 29.6747 100.537 30.216 99.622 30.608C98.7073 31 97.6246 31.196 96.374 31.196C94.2646 31.196 92.5753 30.7293 91.306 29.796C90.0366 28.8627 89.262 27.528 88.982 25.792H93.602C93.6766 26.464 93.9566 26.9773 94.442 27.332C94.946 27.6867 95.59 27.864 96.374 27.864C96.9153 27.864 97.326 27.7427 97.606 27.5C97.886 27.2387 98.026 26.9027 98.026 26.492C98.026 25.9507 97.7646 25.568 97.242 25.344C96.738 25.1013 95.9073 24.8493 94.75 24.588C93.5926 24.3453 92.6406 24.084 91.894 23.804C91.1473 23.524 90.5033 23.076 89.962 22.46C89.4206 21.8253 89.15 20.9667 89.15 19.884C89.15 18.484 89.682 17.3547 90.746 16.496C91.81 15.6187 93.3126 15.18 95.254 15.18ZM119.941 22.768C119.941 23.16 119.895 23.5893 119.801 24.056H108.965C109.021 25.232 109.32 26.0813 109.861 26.604C110.403 27.108 111.093 27.36 111.933 27.36C112.643 27.36 113.231 27.1827 113.697 26.828C114.164 26.4733 114.472 26.016 114.621 25.456H119.689C119.484 26.5573 119.036 27.5467 118.345 28.424C117.655 29.2827 116.777 29.964 115.713 30.468C114.649 30.9533 113.464 31.196 112.157 31.196C110.627 31.196 109.264 30.8787 108.069 30.244C106.893 29.5907 105.969 28.6573 105.297 27.444C104.625 26.2307 104.289 24.812 104.289 23.188C104.289 21.5453 104.616 20.1267 105.269 18.932C105.941 17.7187 106.875 16.7947 108.069 16.16C109.264 15.5067 110.627 15.18 112.157 15.18C113.707 15.18 115.069 15.4973 116.245 16.132C117.421 16.7667 118.327 17.6627 118.961 18.82C119.615 19.9587 119.941 21.2747 119.941 22.768ZM115.097 22.04C115.116 21.0133 114.836 20.248 114.257 19.744C113.697 19.2213 112.997 18.96 112.157 18.96C111.28 18.96 110.552 19.2213 109.973 19.744C109.395 20.2667 109.068 21.032 108.993 22.04H115.097ZM127.225 18.316C127.822 17.364 128.588 16.608 129.521 16.048C130.473 15.488 131.5 15.208 132.601 15.208V20.332H131.229C129.96 20.332 128.97 20.6027 128.261 21.144C127.57 21.6853 127.225 22.6 127.225 23.888V31H122.437V15.376H127.225V18.316ZM141.829 26.324L145.217 15.376H150.313L144.769 31H138.833L133.289 15.376H138.385L141.829 26.324ZM167.137 22.768C167.137 23.16 167.09 23.5893 166.997 24.056H156.161C156.217 25.232 156.515 26.0813 157.057 26.604C157.598 27.108 158.289 27.36 159.129 27.36C159.838 27.36 160.426 27.1827 160.893 26.828C161.359 26.4733 161.667 26.016 161.817 25.456H166.885C166.679 26.5573 166.231 27.5467 165.541 28.424C164.85 29.2827 163.973 29.964 162.909 30.468C161.845 30.9533 160.659 31.196 159.353 31.196C157.822 31.196 156.459 30.8787 155.265 30.244C154.089 29.5907 153.165 28.6573 152.493 27.444C151.821 26.2307 151.485 24.812 151.485 23.188C151.485 21.5453 151.811 20.1267 152.465 18.932C153.137 17.7187 154.07 16.7947 155.265 16.16C156.459 15.5067 157.822 15.18 159.353 15.18C160.902 15.18 162.265 15.4973 163.441 16.132C164.617 16.7667 165.522 17.6627 166.157 18.82C166.81 19.9587 167.137 21.2747 167.137 22.768ZM162.293 22.04C162.311 21.0133 162.031 20.248 161.453 19.744C160.893 19.2213 160.193 18.96 159.353 18.96C158.475 18.96 157.747 19.2213 157.169 19.744C156.59 20.2667 156.263 21.032 156.189 22.04H162.293ZM173.748 26.212V31H168.792V26.212H173.748Z"
+                fill="white"
+              />
+            </svg>
+            <p class="description">
+              We host your empire business today <br class="lg:hidden"/>
+              using the latest technologies.
+            </p>
+            <div class="flex gap-3.5">
+              <a class="footer-socialMedia">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <div class="footer-socialMedia">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.99998 3H8.99998C7.04998 8.84 7.04998 15.16 8.99998 21H7.99998"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 3C16.95 8.84 16.95 15.16 15 21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 9.0001C8.84 7.0501 15.16 7.0501 21 9.0001"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="footer-socialMedia">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
+              <div class="footer-socialMedia">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2.52002 7.10986H21.48"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.52002 2.10986V6.96986"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.48 2.10986V6.51986"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-14 md:flex-row md:gap-16">
+            <div>
+              <h3 class="text-white mb-8">Products</h3>
+              <div class="flex flex-col gap-4">
+                <p class="footer-detail">Powerful Reports</p>
+                <p class="footer-detail">Blockchain</p>
+                <p class="footer-detail">Auto-Backup</p>
+                <p class="footer-detail">Data Science</p>
+                <p class="footer-detail">Auto-Scalling Up</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-white mb-8">Resources</h3>
+              <div class="flex flex-col gap-4">
+                <p class="footer-detail">Support 24/7</p>
+                <p class="footer-detail">Help Center</p>
+                <p class="footer-detail">How-to Instructions</p>
+                <p class="footer-detail">Blog & Tips</p>
+                <p class="footer-detail">About Us</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-white mb-8">Company</h3>
+              <div class="flex flex-col gap-4">
+                <p class="footer-detail">Privacy & Policy</p>
+                <p class="footer-detail">Terms and Conditions</p>
+                <p class="footer-detail">Auto-Backup</p>
+                <p class="footer-detail">Join With Us</p>
+                <p class="footer-detail">Our Statistics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="description text-center mt-12">
+          All Rights Reserved • Copyright Weserve by BuildWithAngga 2024 in
+          Bandung
+        </p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
